@@ -1,0 +1,47 @@
+@layer component {
+  .item {
+    display: grid;
+    width: 2rem;
+    height: 2rem;
+    place-items: center;
+    cursor: grab;
+    position: absolute;
+    border-radius: 0.25rem;
+    background: transparent;
+    top: var(--item-y);
+    left: var(--item-x);
+    transition: all 0.2s cubic-bezier(0.36, 0.43, 0.36, 1.28);
+  }
+
+  .item--disabled {
+    filter: saturate(0) contrast(0);
+    cursor: unset;
+  }
+
+  .item--moving {
+    transition: none;
+    z-index: 99999;
+    filter: drop-shadow(2px 4px 6px hsl(0deg 0% 0% / 1));
+  }
+
+  .item__indicator {
+    border-radius: 0.25rem;
+    border: 1px solid hsl(130deg 100% 62%);
+    background: hsl(130deg 100% 62% / 0.5);
+    position: absolute;
+    top: var(--item-indicator-y);
+    left: var(--item-indicator-x);
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .item__indicator--promotable {
+    border: 1px solid hsl(53deg 100% 62%);
+    background: hsl(53deg 100% 62% / 0.5);
+  }
+
+  .item__indicator--denied {
+    border: 1px solid hsl(5deg 100% 62%);
+    background: hsl(5deg 100% 62% / 0.5);
+  }
+}

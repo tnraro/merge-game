@@ -1,0 +1,14 @@
+@layer component {
+  .board {
+    display: grid;
+    position: relative;
+    gap: 0.5rem;
+    grid-template-columns: repeat(var(--board-width), 2rem);
+    grid-template-rows: repeat(var(--board-height), 2rem);
+  }
+  
+  .board__slot {
+    border: 1px solid gainsboro;
+    border-radius: 0.25rem;
+  }
+}
