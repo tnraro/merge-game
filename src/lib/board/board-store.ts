@@ -1,13 +1,13 @@
 import { produce } from "immer";
 import { create } from "zustand";
-import { devtools, persist } from "zustand/middleware";
+import { devtools } from "zustand/middleware";
 import { data } from "../../data";
-import { pick } from "../utils/pick";
-import { Board, ItemSlot } from "./board-types";
-import { ch, get, init, mv, rm } from "./board-trait";
-import { config } from "./config";
-import { Pos } from "../utils/pos";
 import { distance2 } from "../utils/distance";
+import { pick } from "../utils/pick";
+import { Pos } from "../utils/pos";
+import { ch, get, init, mv, rm } from "./board-trait";
+import { Board, ItemSlot } from "./board-types";
+import { config } from "./config";
 
 interface State {
   board: Board,
