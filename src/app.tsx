@@ -8,7 +8,7 @@ function App() {
 
   return (
     <Board>
-      {board.board.items.map((item) => <Item {...item} />)}
+      {board.board.items.map((item) => <Item {...item} key={item.key} />)}
     </Board>
   )
 }

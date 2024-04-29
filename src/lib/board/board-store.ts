@@ -79,6 +79,9 @@ export const boardStore = create<State>()(
             id: pickedItem,
             disabled: false,
           };
+        } else if (use.type === "money") {
+          console.log(use.value);
+          rm(state.board, pos);
         }
       }))
     }),

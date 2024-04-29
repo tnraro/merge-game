@@ -36,6 +36,8 @@ export const Item = (props: Props) => {
         "item",
         props.item?.disabled ? "item--disabled" : "",
         moving ? "item--moving" : "",
+        item.use?.type === "produce" ? "item--usable" : "",
+        item.use?.type === "money" ? "item--usable" : "",
       ].join(" ")}
       style={{
         "--item-x": moving ? `${pos.x}px` : `${props.x * 2.5}rem`,

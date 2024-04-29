@@ -24,6 +24,11 @@
     filter: drop-shadow(2px 4px 6px hsl(0deg 0% 0% / 1));
   }
 
+  .item--usable {
+    border: 1px solid hsl(53deg 100% 62%);
+    background: hsl(53deg 100% 62% / 0.5);
+  }
+
   .item__indicator {
     border-radius: 0.25rem;
     border: 1px solid hsl(130deg 100% 62%);
